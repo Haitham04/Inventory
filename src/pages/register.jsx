@@ -1,5 +1,4 @@
 import './register.css';
-import picture from './../assets/Login-image.jpg'
 import { Link } from 'react-router-dom';
 const Register = () => {
   return (

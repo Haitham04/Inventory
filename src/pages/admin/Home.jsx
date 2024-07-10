@@ -9,6 +9,7 @@ const Home = () => {
          <SidebarAdmin/>
             <div className="content">
                 <h2>Welcome to the Admin Dashboard</h2>
+                <img src='Login-image.jpg' alt="Login image" class="Login-image" height="380px" width="350px" />
                 <p>Select an option from the menu to get started.</p>
 
 

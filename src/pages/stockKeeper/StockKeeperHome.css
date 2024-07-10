@@ -1,7 +1,7 @@
 .StockKeeperHome {
     text-align: center;
     font-family: Arial, sans-serif;
-    background-image: url('./../asset/image/login-image.jpg');
+    background-image: url('./../asset/login-image.jpg');
     background-size: cover;
     background-position: center; 
     background-repeat: no-repeat; 

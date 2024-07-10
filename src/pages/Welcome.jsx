@@ -1,8 +1,8 @@
 import React from 'react';
 import './Welcome.css';
 import { Link } from 'react-router-dom';
-import Home from './../assets/Home-image.jpg';
-import Home2 from './../assets/Home2-image.jpg';
+import Home from '/public/Home-image.jpg';
+import Home2 from '/public/Home2-image.jpg';
 
 
 
@@ -12,7 +12,7 @@ const Navbar = () => {
     
     <nav className="navbar">
       <div className="navbar-left">
-        <h1>Welcome to Inventory Management</h1>
+        <h1>Inventory Management</h1>
       </div>
       <div className="navbar-right">
         <Link to={'/login'}><button className="login-button">Login</button></Link>
@@ -24,7 +24,7 @@ const Navbar = () => {
 
         <footer className="footer">
         <div>
-          <h3>About us</h3> 
+        <h3 > <Link to= "about" style={{color:'white', textDecoration:'none'}}> About us </Link></h3>
         </div>
         </footer>
         

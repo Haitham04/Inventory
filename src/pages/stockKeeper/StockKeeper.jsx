@@ -13,8 +13,8 @@ const StockKeeper = () => {
                     <li><Link style={{color:'white', textDecoration:'none'}} to={"/stockKeeperHome"}>Home</Link></li>
                     <li>Manage Stock</li>
                     <li>Records Sales</li>
-                    <li><Link style={{color:'white', textDecoration:'none'}} to={"/"}>Logout</Link></li>
-                    <li>Contact</li>
+                    <li> <Link to={'/contact'} style={{color:'white', textDecoration:'none'}}>Contact</Link></li>
+                    <li><Link style={{color:'white', textDecoration:'none'}} to={"/"}>Logout</Link></li>    
                 </ul>
             </div>
             <div className="content">

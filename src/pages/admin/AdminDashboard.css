@@ -3,7 +3,7 @@
     height: 100vh;
     margin-left: 0;
     padding-left: 0rem;
-    margin-left: -36rem;
+    margin-left: 50rem;
   }
   
   .sidebar {
@@ -29,13 +29,13 @@
     width: 100%;
     padding: 15px;
     text-align: center;
-    cursor: pointer;
+    /* cursor: pointer; */
     transition: background-color 0.3s;
   }
   
-  .menu li:hover {
+  /* .menu li:hover {
     background-color: #34495e;
-  }
+  } */
   
   .content {
     flex-grow: 1;

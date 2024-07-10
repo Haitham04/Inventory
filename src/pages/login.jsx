@@ -1,6 +1,6 @@
 import React from 'react'
 import './login.css';
-import picture from './../assets/Login-image.jpg'
+import picture from '/public/Login-image.jpg'
 import { Link } from 'react-router-dom';
  function Login() {
   return (
@@ -16,7 +16,6 @@ import { Link } from 'react-router-dom';
             
             <label for="password" align = "left">Password</label>
             <input type="password" id="password" name="password" placeholder="Enter your password"/>
-            
             <Link to='/Home'> <button type="submit" > Login</button></Link>
          
             
