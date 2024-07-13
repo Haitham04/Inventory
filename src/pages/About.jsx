@@ -4,7 +4,7 @@ import './About.css';
 const About = () => {
     return (
         <div className="about-container">
-            <h1>About Us</h1>
+            <h1 style={{marginTop:'2rem'}}>About Us</h1>
             <p>
             Welcome to Inventory Management System, where innovation meets efficiency. We specialize in providing cutting-edge inventory management solutions tailored to meet the diverse needs of businesses across various industries. Our team of experts is dedicated to helping you optimize your inventory processes, reduce costs, and enhance overall operational efficiency. With a commitment to excellence and customer satisfaction, we strive to be your trusted partner in achieving business success through effective inventory management.
             </p>

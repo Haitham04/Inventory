@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+ 
+  .manage-stock-container {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+  
+ 
+  .manage-stock-container h1 {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+ 
+  .add-item-form {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+  }
+  
+  .add-item-form input {
+    flex: 1;
+    margin-right: 0.5rem;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .add-item-form button {
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: #28a745;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .add-item-form button:hover {
+    background-color: #218838;
+  }
+  
+ 
+  .stock-list {
+    border-top: 1px solid #ddd;
+    padding-top: 1rem;
+  }
+  
+  .stock-list h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  .stock-list ul {
+    list-style: none;
+  }
+  
+  .stock-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .stock-list li:last-child {
+    border-bottom: none;
+  }
+  
+  .stock-list span {
+    flex: 1;
+    margin-right: 0.5rem;
+  }
+  
+  .stock-list input {
+    width: 60px;
+    padding: 0.25rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  

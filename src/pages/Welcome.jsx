@@ -12,7 +12,7 @@ const Navbar = () => {
     
     <nav className="navbar">
       <div className="navbar-left">
-        <h1>Inventory Management</h1>
+        <h1>Welcome to Inventory Management</h1>
       </div>
       <div className="navbar-right">
         <Link to={'/login'}><button className="login-button">Login</button></Link>
@@ -24,7 +24,7 @@ const Navbar = () => {
 
         <footer className="footer">
         <div>
-        <h3 > <Link to= "about" style={{color:'white', textDecoration:'none'}}> About us </Link></h3>
+        <h3 > <Link to= "/about" style={{color:'white', textDecoration:'none'}}> About us </Link></h3>
         </div>
         </footer>
         
