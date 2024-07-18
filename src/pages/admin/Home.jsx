@@ -10,7 +10,7 @@ const Home = () => {
             <div className="content">
                 <h2>Welcome to the Admin Dashboard</h2>
                 <p>Select an option from the menu to get started.</p>
-                <img src='Login-image.jpg' alt="Login image" class="Login-image" height="380px" width="350px" />    
+                <img src='Login-image.jpg' alt="Login image" class="Login-image" height="480px" width="450px" />    
             </div>
     </div>
     </React.Fragment>
