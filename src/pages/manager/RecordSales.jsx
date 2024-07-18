@@ -1,56 +1,71 @@
 import React, { useState } from 'react';
 import './RecordSales.css';
 
-const RecordSales = () => {
-  const [sales, setSales] = useState([]);
-  const [product, setProduct] = useState('');
-  const [quantity, setQuantity] = useState('');
-  const [price, setPrice] = useState('');
+function RecordSales() {
+  const [itemId, setItemId] = useState('');
+  const [date, setDate] = useState('');
+  const [time, setTime] = useState('');
+  const [totalAmount, setTotalAmount] = useState('');
 
-  const handleAddSale = () => {
-    const newSale = { product, quantity, price };
-    setSales([...sales, newSale]);
-    setProduct('');
-    setQuantity('');
-    setPrice('');
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    
+    console.log('Submitted:', itemId, date, time, totalAmount);
+    
+    setItemId('');
+    setDate('');
+    setTime('');
+    setTotalAmount('');
   };
 
   return (
-    <div className="sales-container">
+    <div className="record-sales">
       <h2>Record Sales</h2>
-      <div className="sales-form">
-        <input
-          type="text"
-          placeholder="Product"
-          value={product}
-          onChange={(e) => setProduct(e.target.value)}
-        />
-        <input
-          type="number"
-          placeholder="Quantity"
-          value={quantity}
-          onChange={(e) => setQuantity(e.target.value)}
-        />
-        <input
-          type="number"
-          placeholder="Price"
-          value={price}
-          onChange={(e) => setPrice(e.target.value)}
-        />
-        <button onClick={handleAddSale}>Add Sale</button>
-      </div>
-      <div className="sales-list">
-        <h3>Sales Records</h3>
-        <ul>
-          {sales.map((sale, index) => (
-            <li key={index}>
-              {sale.product} - {sale.quantity} units @ ${sale.price} each
-            </li>
-          ))}
-        </ul>
-      </div>
+      <form onSubmit={handleSubmit}>
+        <div className="form-group">
+          <label htmlFor="itemId">Item ID:</label>
+          <input
+            type="text"
+            id="itemId"
+            value={itemId}
+            onChange={(e) => setItemId(e.target.value)}
+            required
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="date">Date:</label>
+          <input
+            type="date"
+            id="date"
+            value={date}
+            onChange={(e) => setDate(e.target.value)}
+            required
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="time">Time:</label>
+          <input
+            type="time"
+            id="time"
+            value={time}
+            onChange={(e) => setTime(e.target.value)}
+            required
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="totalAmount">Total Amount:</label>
+          <input
+            type="number"
+            id="totalAmount"
+            value={totalAmount}
+            onChange={(e) => setTotalAmount(e.target.value)}
+            required
+          />
+        </div>
+        <button type="submit">Add Sale</button>
+      </form>
     </div>
   );
-};
+}
 
-export default RecordSales;
+export default RecordSales

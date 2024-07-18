@@ -1,61 +1,52 @@
 import React, { useState } from 'react';
 import './ManageStock.css';
 
+const Table = styled.table`
+  width: 100%;
+  border-collapse: collapse;
+
+  th, td {
+    border: 1px solid black;
+    padding: 8px;
+  }
+`;
+
 const ManageStock = () => {
+
   const [items, setItems] = useState([]);
-  const [itemName, setItemName] = useState('');
-  const [itemQuantity, setItemQuantity] = useState('');
 
-  const addItem = () => {
-    if (itemName && itemQuantity) {
-      setItems([...items, { name: itemName, quantity: itemQuantity }]);
-      setItemName('');
-      setItemQuantity('');
-    }
-  };
-
-  const updateQuantity = (index, newQuantity) => {
-    const updatedItems = items.map((item, i) =>
-      i === index ? { ...item, quantity: newQuantity } : item
-    );
-    setItems(updatedItems);
+  const handleAddItem = () => {
+  
   };
 
   return (
-    <div className="manage-stock-container">
-      <h1>Manage Stock</h1>
-      <div className="add-item-form">
-        <input
-          type="text"
-          placeholder="Item Name"
-          value={itemName}
-          onChange={(e) => setItemName(e.target.value)}
-        />
-        <input
-          type="number"
-          placeholder="Quantity"
-          value={itemQuantity}
-          onChange={(e) => setItemQuantity(e.target.value)}
-        />
-        <button onClick={addItem}>Add Item</button>
-      </div>
-      <div className="stock-list">
-        <h2>Current Stock</h2>
-        <ul>
+    <div>
+      <Table>
+        <thead>
+          <tr>
+            <th>Item ID</th>
+            <th>Item Name</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
           {items.map((item, index) => (
-            <li key={index}>
-              <span>{item.name}:</span>
-              <input
-                type="number"
-                value={item.quantity}
-                onChange={(e) => updateQuantity(index, e.target.value)}
-              />
-            </li>
+            <tr key={index}>
+              <td>{item.id}</td>
+              <td>{item.name}</td>
+              <td>{item.price}</td>
+              <td>{item.quantity}</td>
+              <td>{item.description}</td>
+            </tr>
           ))}
-        </ul>
-      </div>
+        </tbody>
+      </Table>
+
+      <button onClick={handleAddItem}>Add Item</button>
     </div>
   );
 };
 
-export default ManageStock;
+export default ManageStock
