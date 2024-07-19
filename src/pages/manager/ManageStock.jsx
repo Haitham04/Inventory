@@ -1,15 +1,14 @@
 import React, { useState } from 'react';
 import './ManageStock.css';
 
-const Table = styled.table`
-  width: 100%;
-  border-collapse: collapse;
+// const Table = styled.table`
+//  
 
-  th, td {
-    border: 1px solid black;
-    padding: 8px;
-  }
-`;
+//   th, td {
+//     
+//     ;
+//   }
+// `;
 
 const ManageStock = () => {
 
@@ -21,10 +20,10 @@ const ManageStock = () => {
 
   return (
     <div>
-      <Table>
+      <table style={{ width: "100%", borderCollapse: "collapse"}}>
         <thead>
           <tr>
-            <th>Item ID</th>
+            <th style={{border: "1px solid black", padding: "8px" }}>Item ID</th>
             <th>Item Name</th>
             <th>Price</th>
             <th>Quantity</th>
@@ -42,7 +41,7 @@ const ManageStock = () => {
             </tr>
           ))}
         </tbody>
-      </Table>
+      </table>
 
       <button onClick={handleAddItem}>Add Item</button>
     </div>

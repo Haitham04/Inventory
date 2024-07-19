@@ -12,7 +12,7 @@ const SidebarAdmin = () => {
                     <Link to={'/manageSales'} style={{color:'white', textDecoration:'none'}} > <li>View Sales</li></Link>
                     <Link to={'/manageStock'} style={{color:'white', textDecoration:'none'}} > <li>View Stock</li></Link>
                     <li> <Link to={'/contact'} style={{color:'white', textDecoration:'none'}}>Contact</Link></li>
-                    <Link to={'/Welcome'} style={{color:'white', textDecoration:'none'}} ><li>Logout</li></Link> 
+                    <Link to={'/'} style={{color:'white', textDecoration:'none'}} ><li>Logout</li></Link> 
                     
                 </ul>
             </div>
