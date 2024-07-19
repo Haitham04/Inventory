@@ -37,7 +37,7 @@ const ManageStock = () => {
               <td>{item.id}</td>
               <td>{item.name}</td>
               <td>{item.price}</td>
-              <td>{item.quantity}</td>
+              <td>{stock.quantity}</td>
               <td>{item.description}</td>
             </tr>
           ))}
